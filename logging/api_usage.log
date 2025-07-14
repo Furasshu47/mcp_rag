@@ -59,3 +59,10 @@
 2025-07-14T17:28:01.586347+0530 INFO Connected to object store
 2025-07-14T17:28:03.296646+0530 INFO Closed MongoDB connection.
 2025-07-14T17:28:03.297324+0530 INFO Connection to object store terminated
+2025-07-14T17:37:55.934991+0530 INFO Connected to MongoDB.
+2025-07-14T17:37:55.990422+0530 INFO Connected to object store
+2025-07-14T17:38:20.292965+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T17:38:20.293790+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-14T17:38:23.699216+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-14T17:38:39.193399+0530 INFO Closed MongoDB connection.
+2025-07-14T17:38:39.194648+0530 INFO Connection to object store terminated

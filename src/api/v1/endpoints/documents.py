@@ -44,7 +44,7 @@ async def upload_documents(db: db_dependency, document: UploadFile = File(...,  
             temp_pdf.write(pdf_bytes)
             temp_pdf_path = temp_pdf.name
 
-        await storage.upload_file(temp_pdf_path, 'mcp_rag/')
+        await storage.upload_file(temp_pdf_path, 'mcp_rag/', filename=document.filename)
 
     except Exception as e:
         logger.error(f"Error during file upload: {e}", exc_info=True)

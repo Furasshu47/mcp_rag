@@ -32,19 +32,24 @@ async def close_storage_connection():
     logger.info("Connection to object store terminated")
 
 
-async def upload_file(file_path: str, folder_prefix: str, bucket_name:str =settings.R2_PUBLIC_BUCKET):
+async def upload_file(file_path: str, folder_prefix: str= '', filename:str|None = None, bucket_name:str =settings.R2_PUBLIC_BUCKET):
     """
     Uploads the given file to an Amazon S3/Cloudflare R2 bucket.
 
     Args:
         file_path (str): The path to the local folder containing the files.
+        folder_prefix (str): An optional prefix to add to the S3 object keys.
+        filename (str): An optional filename taht overrides the default file name
         bucket_name (str): The name of the R2 bucket.
-        s3_folder_prefix (str): An optional prefix to add to the S3 object keys.
+        
     """
     global s3
 
     logger.info(f"Starting upload of file to S3 bucket '{settings.R2_PUBLIC_BUCKET}'...")
-    s3_object_key = os.path.join(folder_prefix, os.path.basename(file_path)).replace("\\", "/")
+    if not(filename):
+        s3_object_key = os.path.join(folder_prefix, os.path.basename(file_path)).replace("\\", "/")
+    else:
+        s3_object_key = os.path.join(folder_prefix, filename).replace("\\", "/")
 
     try:
         
