@@ -1,0 +1,25 @@
+2025-07-14T16:10:58.659462+0530 INFO Connected to MongoDB.
+2025-07-14T16:12:23.414701+0530 INFO Closed MongoDB connection.
+2025-07-14T16:12:23.713976+0530 INFO Connected to MongoDB.
+2025-07-14T16:12:43.677737+0530 INFO Closed MongoDB connection.
+2025-07-14T16:12:43.980504+0530 INFO Connected to MongoDB.
+2025-07-14T16:14:33.718163+0530 INFO Connected to MongoDB.
+2025-07-14T16:14:49.771999+0530 INFO Closed MongoDB connection.
+2025-07-14T16:15:36.638001+0530 INFO Connected to MongoDB.
+2025-07-14T16:16:23.700565+0530 INFO Connected to MongoDB.
+2025-07-14T16:16:56.404432+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:19:19.303387+0530 INFO Connected to MongoDB.
+2025-07-14T16:19:23.494742+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:25:18.221129+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:25:25.957572+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:28:32.154755+0530 INFO Closed MongoDB connection.
+2025-07-14T16:28:32.483538+0530 INFO Connected to MongoDB.
+2025-07-14T16:38:08.390837+0530 INFO Connected to MongoDB.
+2025-07-14T16:39:09.369331+0530 INFO Connected to MongoDB.
+2025-07-14T16:39:14.140642+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:39:15.551842+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:39:16.452462+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:39:19.680541+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:39:20.698059+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:39:21.183491+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T16:39:52.644304+0530 INFO Connected to MongoDB.

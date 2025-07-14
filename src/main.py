@@ -4,12 +4,15 @@ from contextlib import asynccontextmanager
 from src.core.config.settings import settings
 from src.api.router import api_router
 from src.database import database
+from src.services.object_store import storage
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    database.connect_to_mongo()
+    await database.connect_to_mongo()
     yield
-    database.close_mongo_connection()
+    await database.close_mongo_connection()
+    if storage.s3:
+        await storage.close_storage_connection()
     
 
 app = FastAPI(

@@ -5,11 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "boto3>=1.39.4",
     "dotenv>=0.9.9",
     "fastapi>=0.115.12",
     "loguru>=0.7.3",
     "pymongo>=4.13.2",
     "pymupdf4llm>=0.0.24",
     "pymupdf>=1.25.5",
-    "uvicorn[standard]>=0.34.3"
+    "python-multipart>=0.0.20",
+    "uvicorn[standard]>=0.34.3",
 ]

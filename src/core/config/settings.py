@@ -8,8 +8,8 @@ class Settings:
         dotenv_path = os.path.join(BASE_DIR, '.env')
         load_dotenv(dotenv_path=dotenv_path)
 
-        self.PROJECT_NAME: str = "Asbestos Register PDF Processor"
-        self.PROJECT_DESCRIPTION: str = "API to extract structured asbestos register data from PDF files using Generative AI."
+        self.PROJECT_NAME: str = "MCP and RAG project"
+        self.PROJECT_DESCRIPTION: str = "API to store documents and query on the stored documents"
         self.PROJECT_VERSION: str = "1.0.0"
         self.API_V1_STR: str = "/v1"
 

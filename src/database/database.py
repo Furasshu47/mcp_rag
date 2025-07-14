@@ -19,7 +19,7 @@ async def connect_to_mongo():
 
 async def close_mongo_connection():
     if client:
-        client.close()
+        await client.close()
         logger.info("Closed MongoDB connection.")
 
 def get_db() -> AsyncMongoClient:
@@ -27,5 +27,4 @@ def get_db() -> AsyncMongoClient:
         raise RuntimeError("Database has not been initialized.")
     return db
 
-db= client.proj1
-documents_collection= db["documents"]
+
