@@ -20,6 +20,7 @@ async def connect_to_storage():
     aws_secret_access_key = settings.R2_PUBLIC_SECRET_ACCESS_KEY,
     region_name="auto",
     )
+    logger.info("Connected to object store")
     
 
 
@@ -28,6 +29,7 @@ async def close_storage_connection():
     Terminated the connection to object store
     """
     s3.close()
+    logger.info("Connection to object store terminated")
 
 
 async def upload_file(file_path: str, folder_prefix: str, bucket_name:str =settings.R2_PUBLIC_BUCKET):
@@ -46,7 +48,7 @@ async def upload_file(file_path: str, folder_prefix: str, bucket_name:str =setti
 
     try:
         
-        await asyncio.to_thread(s3.upload_file(file_path, bucket_name, s3_object_key))
+        await asyncio.to_thread(s3.upload_file, file_path, bucket_name, s3_object_key)
         logger.info(f"Successfully uploaded file to '{s3_object_key}'")
     except FileNotFoundError:
         logger.error(f"Error: The file '{file_path}' was not found.")
@@ -61,7 +63,6 @@ async def upload_file(file_path: str, folder_prefix: str, bucket_name:str =setti
     except Exception as e:
         logger.error(f"An unexpected error occurred while uploading '{file_path}': {e}")
 
-    logger.info(f"Successfully uploaded the file")
 
 
 

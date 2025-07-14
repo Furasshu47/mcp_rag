@@ -23,3 +23,39 @@
 2025-07-14T16:39:20.698059+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
 2025-07-14T16:39:21.183491+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
 2025-07-14T16:39:52.644304+0530 INFO Connected to MongoDB.
+2025-07-14T17:20:42.440350+0530 INFO Connected to MongoDB.
+2025-07-14T17:20:49.905739+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T17:21:09.268911+0530 INFO Connected to MongoDB.
+2025-07-14T17:21:15.754777+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T17:21:15.755577+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-14T17:21:18.754885+0530 ERROR An unexpected error occurred while uploading '/tmp/tmpjhpn51db.pdf': 'NoneType' object is not callable
+2025-07-14T17:21:18.755744+0530 INFO Successfully uploaded the file
+2025-07-14T17:23:13.656685+0530 INFO Connected to MongoDB.
+2025-07-14T17:23:13.713501+0530 INFO Connected to object store
+2025-07-14T17:23:58.487241+0530 INFO Connected to MongoDB.
+2025-07-14T17:23:58.553065+0530 INFO Connected to object store
+2025-07-14T17:24:09.933485+0530 INFO Connected to MongoDB.
+2025-07-14T17:24:09.993704+0530 INFO Connected to object store
+2025-07-14T17:24:17.573979+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T17:24:17.574750+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-14T17:24:20.529431+0530 ERROR An unexpected error occurred while uploading '/tmp/tmpb7vw0d3c.pdf': 'NoneType' object is not callable
+2025-07-14T17:24:20.530315+0530 INFO Successfully uploaded the file
+2025-07-14T17:26:07.438393+0530 INFO Closed MongoDB connection.
+2025-07-14T17:26:07.780583+0530 INFO Connected to MongoDB.
+2025-07-14T17:26:07.835538+0530 INFO Connected to object store
+2025-07-14T17:26:15.243476+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-14T17:26:15.244272+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-14T17:26:18.867602+0530 INFO Successfully uploaded file to 'mcp_rag/tmptpld07u5.pdf'
+2025-07-14T17:26:18.868478+0530 INFO Successfully uploaded the file
+2025-07-14T17:26:37.426261+0530 INFO Closed MongoDB connection.
+2025-07-14T17:26:37.426619+0530 INFO Connection to object store terminated
+2025-07-14T17:26:37.743188+0530 INFO Connected to MongoDB.
+2025-07-14T17:26:37.798879+0530 INFO Connected to object store
+2025-07-14T17:26:42.114673+0530 INFO Closed MongoDB connection.
+2025-07-14T17:26:42.115678+0530 INFO Connection to object store terminated
+2025-07-14T17:27:10.991626+0530 INFO Connected to MongoDB.
+2025-07-14T17:27:11.046340+0530 INFO Connected to object store
+2025-07-14T17:28:01.531484+0530 INFO Connected to MongoDB.
+2025-07-14T17:28:01.586347+0530 INFO Connected to object store
+2025-07-14T17:28:03.296646+0530 INFO Closed MongoDB connection.
+2025-07-14T17:28:03.297324+0530 INFO Connection to object store terminated
