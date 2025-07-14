@@ -2,12 +2,30 @@ from src.core.config.settings import settings
 from pymongo import AsyncMongoClient
 from src.core.logging.logger import logger
 
-uri = settings.DATABASE_URI
-try:
-    client = AsyncMongoClient(uri)
+client: AsyncMongoClient= None
+db= None
 
-except Exception as e:
-    logger.error(f"Failed to connect to database. Error:{e}")
+uri = settings.DATABASE_URI
+
+async def connect_to_mongo():
+    global client, db
+    try:
+        client = AsyncMongoClient(uri)
+        db = client["proj1"]
+        logger.info("Connected to MongoDB.")
+    except Exception as e:
+        logger.error(f"MongoDB connection failed: {e}")
+        raise
+
+async def close_mongo_connection():
+    if client:
+        client.close()
+        logger.info("Closed MongoDB connection.")
+
+def get_db() -> AsyncMongoClient:
+    if db is None:
+        raise RuntimeError("Database has not been initialized.")
+    return db
 
 db= client.proj1
 documents_collection= db["documents"]
