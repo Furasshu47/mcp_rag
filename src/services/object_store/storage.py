@@ -55,6 +55,7 @@ async def upload_file(file_path: str, folder_prefix: str= '', filename:str|None 
         
         await asyncio.to_thread(s3.upload_file, file_path, bucket_name, s3_object_key)
         logger.info(f"Successfully uploaded file to '{s3_object_key}'")
+
     except FileNotFoundError:
         logger.error(f"Error: The file '{file_path}' was not found.")
     except NoCredentialsError:
@@ -68,6 +69,32 @@ async def upload_file(file_path: str, folder_prefix: str= '', filename:str|None 
     except Exception as e:
         logger.error(f"An unexpected error occurred while uploading '{file_path}': {e}")
 
+async def delete_file(s3_object_key:str,  bucket_name:str =settings.R2_PUBLIC_BUCKET):
+    """
+    Deletes the file with the provided object key from the object store.
+    Args:
+        s3_object_key (str): Object key for the file to be deleted
+        bucket_name (str): Name of the bucket where the file is stored. If unspecified, uses the bucket name in the config file
+    """
+
+    logger.info(f"Trying to delete {s3_object_key} from '{settings.R2_PUBLIC_BUCKET}'...")
+
+    try:
+        await asyncio.to_thread(s3.delete_object, Bucket= bucket_name, Key= s3_object_key)
+        logger.info(f"Successfully deleted object '{s3_object_key}' from bucket '{bucket_name}'")
+
+    except NoCredentialsError:
+        logger.error("Error: Credentials not found. Please configure your credentials.")
+    except ClientError as e:
+        error_code = e.response.get("Error", {}).get("Code")
+        if error_code == 'NoSuchBucket':
+            logger.error(f"Error: S3 bucket '{bucket_name}' does not exist or you don't have access.")
+        elif error_code == 'NoSuchKey':
+            logger.warning(f"Warning: Object '{s3_object_key}' does not exist in bucket '{bucket_name}' (may have already been deleted).")
+        else:
+            logger.error(f"Error deleting object '{s3_object_key}': {e}")
+    except Exception as e:
+        logger.error(f"An unexpected error occurred while deleting object '{s3_object_key}': {e}")
 
 
 

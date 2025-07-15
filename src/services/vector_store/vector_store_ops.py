@@ -10,6 +10,17 @@ from src.core.config.settings import settings
 from src.core.logging.logger import logger
 
 
+#Declaring the embedding model
+embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+
+#Instantiating the vector store
+vector_store = Chroma(
+collection_name="documents_colelction",
+embedding_function=embeddings,
+persist_directory="./document_vector_db",
+)
+
+
 async def embed_and_store(pdf_path: str, metadata: Dict):
     """
     Accepts a PDF path, converts it to embedding and stores it in a vector database
@@ -32,19 +43,24 @@ async def embed_and_store(pdf_path: str, metadata: Dict):
     for doc in all_splits:
         doc.metadata.update(metadata)
 
-    #Declaring the embedding model
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
-
-    #Instantiating the vector store
-    vector_store = Chroma(
-    collection_name="documents_colelction",
-    embedding_function=embeddings,
-    persist_directory="./document_vector_db",
-    )
+    
 
     #Adding chunks to the vector store
     await vector_store.aadd_documents(all_splits)
 
     logger.info(f"Successfully added {metadata["filename"]} to vector store")
+
+async def delete_by_filename(filename: str):
+    """
+    Accepts a filename and deleted the file chunks from the vector store
+    Args:
+        filename (str) : The file to be deleted
+    """
+    logger.info(f"Deleting vector chunks for file: {filename}") 
+    try:  
+        await vector_store.adelete(where={"filename": filename})
+    except Exception as e:
+        logger.error(f"Failed to delete file chunks from vector store. Error: {e}")
+    logger.info("Successfully deleted chunks for the file")
 
 

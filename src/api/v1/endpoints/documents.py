@@ -1,6 +1,5 @@
-from fastapi import APIRouter, status, Depends, UploadFile, File, HTTPException, Form
-from typing import List, Dict, Any
-from typing import Annotated, Optional
+from fastapi import APIRouter, status, Depends, UploadFile, File, HTTPException, Form, Query
+from typing import List, Dict, Any, Annotated, Optional
 from pymongo import AsyncMongoClient
 from datetime import datetime, date, timedelta
 import tempfile
@@ -9,7 +8,7 @@ import os
 from src.database import database
 from src.core.logging.logger import logger
 from src.services.object_store import storage
-from src.services.embed_store import embed_and_store
+from src.services.vector_store import vector_store_ops
 
 router = APIRouter(tags=['Documents'])
 
@@ -20,7 +19,7 @@ async def upload_documents(db: db_dependency, document: UploadFile = File(...,  
     """
     Receives a PDF file and metadata related to it. Stores the file in AWS/R2 bucket and the metadata in MongoDB.
     """
-    logger.info(f"Endpoint '/extract-asbestos-data/': Processing file '{document.filename}'.")
+    logger.info(f"Endpoint '/upload': Processing file '{document.filename}'.")
 
     #Check if the file is a PDF
     if not document.filename.endswith(".pdf"):
@@ -40,7 +39,8 @@ async def upload_documents(db: db_dependency, document: UploadFile = File(...,  
         # Convert date to datetime with time set to 00:00:00
         expiry_dt = datetime.combine(expiry_date, datetime.min.time())
     except ValueError:
-        return {"error": "Invalid date format. Use YYYY-MM-DD (e.g., 2027-07-30)"}
+        logger.error("Invalid date format")
+        raise HTTPException(status_code=400, detail="Invalid date format. Use YYYY-MM-DD (e.g., 2027-07-30)")
 
     #Converting the pdf bytes to temp pdf file
     pdf_bytes = await document.read()
@@ -60,10 +60,9 @@ async def upload_documents(db: db_dependency, document: UploadFile = File(...,  
             }
         
         #Embedding and storing in vector database
-        await embed_and_store.embed_and_store(temp_pdf_path, metadata)
+        await vector_store_ops.embed_and_store(temp_pdf_path, metadata)
         
         #Uploading metadata to MongoDB
-        db["documents_collection"]
         result = await db["documents_collection"].insert_one(metadata)
         if (result.acknowledged):
             logger.info("Metadata stored successfully")
@@ -91,4 +90,33 @@ async def upload_documents(db: db_dependency, document: UploadFile = File(...,  
         "filename": document.filename,
         "expiry_datetime": expiry_dt.isoformat()
     }
+
+@router.delete('/delete', status_code=status.HTTP_204_NO_CONTENT)
+async def upload_documents(db: db_dependency, filename: Annotated[str | None, Query(min_length=1)]):
+    """
+    Receives a PDF file name and deleted the entry for that file name.
+    """
+    logger.info(f"Endpoint '/delete': Deleting file '{filename}'.")
+    try:
+        #Deleting from object store
+        await storage.delete_file(('mcp_rag/'+filename))
+
+        #Deleting from vector store
+        await vector_store_ops.delete_by_filename(filename)
+
+        #Deleting metadata from MongoDB
+        filter = { "filename" : filename }
+        try:
+            logger.info("Deleting the file metadata from MongoDB")
+            result= await db["documents_collection"].delete_many(filter)
+            if (result.acknowledged):
+                logger.info("Successfukky deleted instance from MongoDB")
+        except Exception as e:
+            logger.error(f"Failed to delete file metadata from MongoDB, Error: {e}")
+
+    except Exception as e:
+        logger.error(f"Error while trying to delete {filename}: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to delete file. Error: {e}")
+
+    logger.info(f"All existing instances of named {filename} have been deleted")
 

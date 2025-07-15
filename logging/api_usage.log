@@ -192,3 +192,79 @@ Try filtering complex metadata from the document using langchain_community.vecto
 2025-07-15T13:20:24.098394+0530 INFO Metadata stored successfully
 2025-07-15T13:34:14.542554+0530 INFO Closed MongoDB connection.
 2025-07-15T13:34:14.543744+0530 INFO Connection to object store terminated
+2025-07-15T16:10:41.021246+0530 INFO Connected to MongoDB.
+2025-07-15T16:10:41.075838+0530 INFO Connected to object store
+2025-07-15T16:11:21.255963+0530 INFO Endpoint '/delete': Deleting file 'Result_SHORT.pdf'.
+2025-07-15T16:11:21.256110+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T16:11:21.256525+0530 ERROR An unexpected error occurred while deleting object 'mcp_rag/Result_SHORT.pdf': delete_object() only accepts keyword arguments.
+2025-07-15T16:11:21.256651+0530 INFO Deleting vector chunks for file: Result_SHORT.pdf
+2025-07-15T16:11:21.256871+0530 ERROR Error while trying to delete Result_SHORT.pdf: Collection.delete() got an unexpected keyword argument 'filter'
+2025-07-15T16:14:00.993820+0530 INFO Closed MongoDB connection.
+2025-07-15T16:14:00.994524+0530 INFO Connection to object store terminated
+2025-07-15T16:14:02.334004+0530 INFO Connected to MongoDB.
+2025-07-15T16:14:02.391649+0530 INFO Connected to object store
+2025-07-15T16:14:35.875480+0530 INFO Closed MongoDB connection.
+2025-07-15T16:14:35.876185+0530 INFO Connection to object store terminated
+2025-07-15T16:14:37.216933+0530 INFO Connected to MongoDB.
+2025-07-15T16:14:37.272990+0530 INFO Connected to object store
+2025-07-15T16:16:50.145222+0530 INFO Closed MongoDB connection.
+2025-07-15T16:16:50.145949+0530 INFO Connection to object store terminated
+2025-07-15T16:16:51.478085+0530 INFO Connected to MongoDB.
+2025-07-15T16:16:51.535841+0530 INFO Connected to object store
+2025-07-15T16:16:58.163605+0530 INFO Endpoint '/delete': Deleting file 'Result_SHORT.pdf'.
+2025-07-15T16:16:58.163818+0530 INFO Trying to delete mcp_rag/Result_SHORT.pdf from 'rexolve-ai-test'...
+2025-07-15T16:16:58.723835+0530 INFO Successfully deleted object 'mcp_rag/Result_SHORT.pdf' from bucket 'rexolve-ai-test'
+2025-07-15T16:16:58.724093+0530 INFO Deleting vector chunks for file: Result_SHORT.pdf
+2025-07-15T16:16:58.724322+0530 ERROR Failed to delete file chunks from vector store. Error: Collection.delete() got an unexpected keyword argument 'filter'
+2025-07-15T16:16:58.724446+0530 INFO Successfully deleted chunks for the file
+2025-07-15T16:16:59.554316+0530 INFO All existing instances of named Result_SHORT.pdf have been deleted
+2025-07-15T16:18:50.033266+0530 INFO Closed MongoDB connection.
+2025-07-15T16:18:50.034547+0530 INFO Connection to object store terminated
+2025-07-15T16:18:51.312656+0530 INFO Connected to MongoDB.
+2025-07-15T16:18:51.368169+0530 INFO Connected to object store
+2025-07-15T16:19:34.497015+0530 INFO Closed MongoDB connection.
+2025-07-15T16:19:34.497642+0530 INFO Connection to object store terminated
+2025-07-15T16:19:35.781384+0530 INFO Connected to MongoDB.
+2025-07-15T16:19:35.836525+0530 INFO Connected to object store
+2025-07-15T16:20:07.327643+0530 INFO Closed MongoDB connection.
+2025-07-15T16:20:08.661693+0530 INFO Connected to MongoDB.
+2025-07-15T16:20:08.719692+0530 INFO Connected to object store
+2025-07-15T16:20:39.803913+0530 INFO Closed MongoDB connection.
+2025-07-15T16:20:39.804548+0530 INFO Connection to object store terminated
+2025-07-15T16:20:41.150764+0530 INFO Connected to MongoDB.
+2025-07-15T16:20:41.204905+0530 INFO Connected to object store
+2025-07-15T16:20:45.348826+0530 INFO Endpoint '/delete': Deleting file 'Result_SHORT.pdf'.
+2025-07-15T16:20:45.349046+0530 INFO Trying to delete mcp_rag/Result_SHORT.pdf from 'rexolve-ai-test'...
+2025-07-15T16:20:45.854012+0530 INFO Successfully deleted object 'mcp_rag/Result_SHORT.pdf' from bucket 'rexolve-ai-test'
+2025-07-15T16:20:45.854775+0530 INFO Deleting vector chunks for file: Result_SHORT.pdf
+2025-07-15T16:20:45.855632+0530 ERROR Failed to delete file chunks from vector store. Error: Collection.delete() got an unexpected keyword argument 'filter'
+2025-07-15T16:20:45.856105+0530 INFO Successfully deleted chunks for the file
+2025-07-15T16:20:45.856351+0530 INFO Deleting the file metadata from MongoDB
+2025-07-15T16:20:46.534079+0530 INFO All existing instances of named Result_SHORT.pdf have been deleted
+2025-07-15T16:22:34.507196+0530 INFO Closed MongoDB connection.
+2025-07-15T16:22:34.508579+0530 INFO Connection to object store terminated
+2025-07-15T16:22:35.872352+0530 INFO Connected to MongoDB.
+2025-07-15T16:22:35.929704+0530 INFO Connected to object store
+2025-07-15T16:22:38.825172+0530 INFO Endpoint '/delete': Deleting file 'Result_SHORT.pdf'.
+2025-07-15T16:22:38.825392+0530 INFO Trying to delete mcp_rag/Result_SHORT.pdf from 'rexolve-ai-test'...
+2025-07-15T16:22:39.373842+0530 INFO Successfully deleted object 'mcp_rag/Result_SHORT.pdf' from bucket 'rexolve-ai-test'
+2025-07-15T16:22:39.374033+0530 INFO Deleting vector chunks for file: Result_SHORT.pdf
+2025-07-15T16:22:39.374345+0530 ERROR Failed to delete file chunks from vector store. Error: Collection.delete() got an unexpected keyword argument 'filter'
+2025-07-15T16:22:39.374442+0530 INFO Successfully deleted chunks for the file
+2025-07-15T16:22:39.374542+0530 INFO Deleting the file metadata from MongoDB
+2025-07-15T16:22:40.082290+0530 INFO Successfukky deleted instance from MongoDB
+2025-07-15T16:22:40.083352+0530 INFO All existing instances of named Result_SHORT.pdf have been deleted
+2025-07-15T16:27:26.160190+0530 INFO Closed MongoDB connection.
+2025-07-15T16:27:26.161461+0530 INFO Connection to object store terminated
+2025-07-15T16:27:27.516663+0530 INFO Connected to MongoDB.
+2025-07-15T16:27:27.573932+0530 INFO Connected to object store
+2025-07-15T16:27:46.470479+0530 INFO Endpoint '/delete': Deleting file 'Result_SHORT.pdf'.
+2025-07-15T16:27:46.470686+0530 INFO Trying to delete mcp_rag/Result_SHORT.pdf from 'rexolve-ai-test'...
+2025-07-15T16:27:47.032444+0530 INFO Successfully deleted object 'mcp_rag/Result_SHORT.pdf' from bucket 'rexolve-ai-test'
+2025-07-15T16:27:47.032606+0530 INFO Deleting vector chunks for file: Result_SHORT.pdf
+2025-07-15T16:27:47.168384+0530 INFO Successfully deleted chunks for the file
+2025-07-15T16:27:47.168549+0530 INFO Deleting the file metadata from MongoDB
+2025-07-15T16:27:47.896468+0530 INFO Successfukky deleted instance from MongoDB
+2025-07-15T16:27:47.896694+0530 INFO All existing instances of named Result_SHORT.pdf have been deleted
+2025-07-15T16:28:46.168385+0530 INFO Closed MongoDB connection.
+2025-07-15T16:28:46.169415+0530 INFO Connection to object store terminated
