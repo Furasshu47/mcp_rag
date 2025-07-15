@@ -66,3 +66,129 @@
 2025-07-14T17:38:23.699216+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
 2025-07-14T17:38:39.193399+0530 INFO Closed MongoDB connection.
 2025-07-14T17:38:39.194648+0530 INFO Connection to object store terminated
+2025-07-15T11:39:03.680785+0530 INFO Connected to MongoDB.
+2025-07-15T11:39:03.748935+0530 INFO Connected to object store
+2025-07-15T11:39:53.471094+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T11:39:53.471797+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T11:39:57.605569+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T11:39:58.531737+0530 INFO True
+2025-07-15T11:42:38.205061+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T11:42:38.205620+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T11:42:41.129526+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T11:42:41.186801+0530 INFO True
+2025-07-15T11:43:41.916149+0530 INFO Closed MongoDB connection.
+2025-07-15T11:43:41.916509+0530 INFO Connection to object store terminated
+2025-07-15T11:43:42.295379+0530 INFO Connected to MongoDB.
+2025-07-15T11:43:42.354396+0530 INFO Connected to object store
+2025-07-15T11:44:12.616793+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T11:44:12.617573+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T11:44:15.625323+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T11:44:16.449211+0530 INFO Metadata stored successfully
+2025-07-15T11:46:18.190205+0530 INFO Closed MongoDB connection.
+2025-07-15T11:46:18.190536+0530 INFO Connection to object store terminated
+2025-07-15T12:59:26.930524+0530 INFO Connected to MongoDB.
+2025-07-15T12:59:26.992292+0530 INFO Connected to object store
+2025-07-15T12:59:42.368998+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T12:59:42.369650+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T12:59:46.207292+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T12:59:46.208253+0530 ERROR Error during file upload: unhashable type: 'dict'
+2025-07-15T13:01:46.988108+0530 INFO Closed MongoDB connection.
+2025-07-15T13:01:46.989503+0530 INFO Connection to object store terminated
+2025-07-15T13:01:48.050725+0530 INFO Connected to MongoDB.
+2025-07-15T13:01:48.109013+0530 INFO Connected to object store
+2025-07-15T13:01:52.473565+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:01:52.474361+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:01:55.989683+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:01:56.837976+0530 INFO Metadata stored successfully
+2025-07-15T13:01:57.305306+0530 ERROR Error during file upload: 'list' object is not callable
+2025-07-15T13:06:18.908770+0530 INFO Closed MongoDB connection.
+2025-07-15T13:06:18.910375+0530 INFO Connection to object store terminated
+2025-07-15T13:06:19.980749+0530 INFO Connected to MongoDB.
+2025-07-15T13:06:20.038043+0530 INFO Connected to object store
+2025-07-15T13:06:24.349468+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:06:24.350409+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:06:28.032267+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:06:29.004662+0530 INFO Metadata stored successfully
+2025-07-15T13:06:29.085617+0530 ERROR Error during file upload: 'list' object is not callable
+2025-07-15T13:06:43.581830+0530 INFO Closed MongoDB connection.
+2025-07-15T13:06:43.583097+0530 INFO Connection to object store terminated
+2025-07-15T13:06:44.645264+0530 INFO Connected to MongoDB.
+2025-07-15T13:06:44.701933+0530 INFO Connected to object store
+2025-07-15T13:07:09.789856+0530 INFO Closed MongoDB connection.
+2025-07-15T13:07:09.790533+0530 INFO Connection to object store terminated
+2025-07-15T13:07:10.924205+0530 INFO Connected to MongoDB.
+2025-07-15T13:07:10.986140+0530 INFO Connected to object store
+2025-07-15T13:07:13.129668+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:07:13.130653+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:07:15.989458+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:07:16.592398+0530 INFO Metadata stored successfully
+2025-07-15T13:07:16.667741+0530 ERROR Error during file upload: 'list' object is not callable
+2025-07-15T13:07:24.642200+0530 INFO Closed MongoDB connection.
+2025-07-15T13:07:24.643059+0530 INFO Connection to object store terminated
+2025-07-15T13:07:25.686926+0530 INFO Connected to MongoDB.
+2025-07-15T13:07:25.743507+0530 INFO Connected to object store
+2025-07-15T13:09:44.148330+0530 INFO Closed MongoDB connection.
+2025-07-15T13:09:45.180972+0530 INFO Connected to MongoDB.
+2025-07-15T13:09:45.242073+0530 INFO Connected to object store
+2025-07-15T13:09:50.607173+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:09:50.607990+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:09:53.700266+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:09:54.585181+0530 INFO Metadata stored successfully
+2025-07-15T13:09:54.664914+0530 ERROR Error found here
+2025-07-15T13:09:54.665208+0530 ERROR Error during file upload: cannot access local variable 'data' where it is not associated with a value
+2025-07-15T13:11:21.445318+0530 INFO Closed MongoDB connection.
+2025-07-15T13:11:21.446885+0530 INFO Connection to object store terminated
+2025-07-15T13:11:22.481731+0530 INFO Connected to MongoDB.
+2025-07-15T13:11:22.538074+0530 INFO Connected to object store
+2025-07-15T13:11:27.474701+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:11:27.475488+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:11:29.838690+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:11:30.659221+0530 INFO Metadata stored successfully
+2025-07-15T13:11:43.467456+0530 ERROR Error during file upload: Expected metadata value to be a str, int, float, bool, or None, got 2026-12-12 00:00:00 which is a datetime in upsert.
+
+Try filtering complex metadata from the document using langchain_community.vectorstores.utils.filter_complex_metadata.
+2025-07-15T13:12:26.193429+0530 INFO Closed MongoDB connection.
+2025-07-15T13:12:26.194421+0530 INFO Connection to object store terminated
+2025-07-15T13:12:27.273953+0530 INFO Connected to MongoDB.
+2025-07-15T13:12:27.329863+0530 INFO Connected to object store
+2025-07-15T13:12:30.666155+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:12:30.667104+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:12:34.349874+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:12:35.315502+0530 INFO Metadata stored successfully
+2025-07-15T13:12:38.854663+0530 ERROR Error during file upload: Expected metadata value to be a str, int, float, bool, or None, got 6876066ab6b3435480a18029 which is a ObjectId in upsert.
+
+Try filtering complex metadata from the document using langchain_community.vectorstores.utils.filter_complex_metadata.
+2025-07-15T13:16:55.607591+0530 INFO Closed MongoDB connection.
+2025-07-15T13:16:55.608637+0530 INFO Connection to object store terminated
+2025-07-15T13:16:56.716117+0530 INFO Connected to MongoDB.
+2025-07-15T13:16:56.774259+0530 INFO Connected to object store
+2025-07-15T13:17:00.768296+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:17:00.769102+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:17:04.597495+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:17:05.571885+0530 INFO Metadata stored successfully
+2025-07-15T13:17:08.683157+0530 ERROR Error during file upload: Expected metadata value to be a str, int, float, bool, or None, got 68760778975e7039802306f7 which is a ObjectId in upsert.
+
+Try filtering complex metadata from the document using langchain_community.vectorstores.utils.filter_complex_metadata.
+2025-07-15T13:17:42.567263+0530 INFO Closed MongoDB connection.
+2025-07-15T13:17:42.567628+0530 INFO Connection to object store terminated
+2025-07-15T13:17:43.675746+0530 INFO Connected to MongoDB.
+2025-07-15T13:17:43.734807+0530 INFO Connected to object store
+2025-07-15T13:17:45.189014+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:17:45.189852+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:17:47.010490+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:17:47.613255+0530 INFO Metadata stored successfully
+2025-07-15T13:17:47.614228+0530 INFO Metadata:  {'filename': 'Result_SHORT.pdf', 'expiry date': '2026-12-12T00:00:00', '_id': ObjectId('687607a320f07c82bfc34035')}
+2025-07-15T13:17:50.451954+0530 ERROR Error during file upload: Expected metadata value to be a str, int, float, bool, or None, got 687607a320f07c82bfc34035 which is a ObjectId in upsert.
+
+Try filtering complex metadata from the document using langchain_community.vectorstores.utils.filter_complex_metadata.
+2025-07-15T13:20:10.210108+0530 INFO Closed MongoDB connection.
+2025-07-15T13:20:11.284758+0530 INFO Connected to MongoDB.
+2025-07-15T13:20:11.344380+0530 INFO Connected to object store
+2025-07-15T13:20:17.103027+0530 INFO Endpoint '/extract-asbestos-data/': Processing file 'Result_SHORT.pdf'.
+2025-07-15T13:20:17.103945+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-15T13:20:20.076888+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-15T13:20:20.077868+0530 INFO Metadata:  {'filename': 'Result_SHORT.pdf', 'expiry date': '2026-12-12T00:00:00'}
+2025-07-15T13:20:23.112422+0530 INFO Successfully added Result_SHORT.pdf to vector store
+2025-07-15T13:20:24.098394+0530 INFO Metadata stored successfully
+2025-07-15T13:34:14.542554+0530 INFO Closed MongoDB connection.
+2025-07-15T13:34:14.543744+0530 INFO Connection to object store terminated
