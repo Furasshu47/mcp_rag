@@ -268,3 +268,27 @@ Try filtering complex metadata from the document using langchain_community.vecto
 2025-07-15T16:27:47.896694+0530 INFO All existing instances of named Result_SHORT.pdf have been deleted
 2025-07-15T16:28:46.168385+0530 INFO Closed MongoDB connection.
 2025-07-15T16:28:46.169415+0530 INFO Connection to object store terminated
+2025-07-16T12:00:23.018398+0530 INFO Connected to MongoDB.
+2025-07-16T12:00:23.082192+0530 INFO Connected to object store
+2025-07-16T12:01:30.323111+0530 INFO Endpoint '/upload': Processing file 'Result_SHORT.pdf'.
+2025-07-16T12:01:30.323922+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-16T12:01:35.060187+0530 INFO Successfully uploaded file to 'mcp_rag/Result_SHORT.pdf'
+2025-07-16T12:01:35.060932+0530 INFO Metadata:  {'filename': 'Result_SHORT.pdf', 'expiry date': '2026-07-16T00:00:00'}
+2025-07-16T12:01:48.135595+0530 INFO Successfully added Result_SHORT.pdf to vector store
+2025-07-16T12:01:48.798116+0530 INFO Metadata stored successfully
+2025-07-16T12:10:35.639222+0530 INFO Closed MongoDB connection.
+2025-07-16T12:10:35.639572+0530 INFO Connection to object store terminated
+2025-07-16T12:10:36.957906+0530 INFO Connected to MongoDB.
+2025-07-16T12:10:37.017966+0530 INFO Connected to object store
+2025-07-16T12:10:39.523616+0530 INFO Closed MongoDB connection.
+2025-07-16T12:10:39.524456+0530 INFO Connection to object store terminated
+2025-07-16T12:51:46.367960+0530 INFO Connected to MongoDB.
+2025-07-16T12:51:46.427396+0530 INFO Connected to object store
+2025-07-16T12:52:00.643512+0530 INFO Endpoint '/upload': Processing file 'Asbestos_Report.pdf'.
+2025-07-16T12:52:00.646758+0530 INFO Starting upload of file to S3 bucket 'rexolve-ai-test'...
+2025-07-16T12:52:05.087179+0530 INFO Successfully uploaded file to 'mcp_rag/Asbestos_Report.pdf'
+2025-07-16T12:52:05.087872+0530 INFO Metadata:  {'filename': 'Asbestos_Report.pdf', 'expiry date': '2026-07-16T00:00:00'}
+2025-07-16T12:52:09.403405+0530 INFO Successfully added Asbestos_Report.pdf to vector store
+2025-07-16T12:52:10.195312+0530 INFO Metadata stored successfully
+2025-07-16T12:54:41.994298+0530 INFO Closed MongoDB connection.
+2025-07-16T12:54:41.995344+0530 INFO Connection to object store terminated
