@@ -8,6 +8,7 @@ dependencies = [
     "boto3>=1.39.4",
     "dotenv>=0.9.9",
     "fastapi>=0.115.12",
+    "gradio>=5.40.0",
     "langchain-chroma>=0.2.4",
     "langchain-community>=0.3.27",
     "langchain-mcp-adapters>=0.1.9",

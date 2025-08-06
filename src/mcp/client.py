@@ -7,8 +7,10 @@ from langgraph.store.memory import InMemoryStore
 from langmem import create_manage_memory_tool, create_search_memory_tool
 
 import asyncio
+import gradio as gr
 
 from src.core.config.settings import settings
+from src.core.logging.logger import logger
 
 server_params = StdioServerParameters(
     command="python",
@@ -36,12 +38,24 @@ async def main():
             
 
             # Create and run the chat loop
+            global agent
             agent = create_react_agent("openai:gpt-4.1", tools, store=store)
-            await chat_loop(agent)
+
+            demo= gr.ChatInterface(chat,
+                                   type= 'messages',
+                                   title= 'RAG MCP Test chat',
+                                   description= 'Upload files (not yet implemented) and ask questions regarding those files',
+                                #    textbox=gr.MultimodalTextbox(file_types=[".pdf", ".txt"]),
+                                #    multimodal=True
+                                   )
+            
+            demo.launch()
+            # await chat_loop(agent)
+            logger.info("Exiting the program...")
+
             #agent_response = await agent.ainvoke({"messages": "Which pdf documents will be expiriing in 2026?"})
 
             #print("Agent response:", agent_response['messages'][-1].content)
-
 
 async def chat_loop(agent):
     while(True):
@@ -54,6 +68,25 @@ async def chat_loop(agent):
                 {"role": "user", "content": human_message}]
         })
         print("Agent response:", agent_response['messages'][-1].content)
+
+async def chat(message, history):
+    # System prompt
+    messages = [{"role": "system", "content": "You are an AI assistant that can remember all conversation in memory. Store every message in memory"}]
+
+    # for user_msg, bot_msg in history: # Populating messages list with history
+    #     messages.append({"role": "user", "content": user_msg}) 
+    #     messages.append({"role": "assistant", "content": bot_msg})
+    # messages.append({"role": "user", "content": message})
+
+     # history is a list of dicts like {'role': 'user'/'assistant', 'content': '...'}
+    messages.extend(history)
+
+    # Add the latest user message
+    messages.append({"role": "user", "content": message})
+    agent_response = await agent.ainvoke({
+            "messages": messages
+    })
+    return agent_response['messages'][-1].content
 
 if __name__== '__main__':
     asyncio.run(main())

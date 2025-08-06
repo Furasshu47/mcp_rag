@@ -292,3 +292,93 @@ Try filtering complex metadata from the document using langchain_community.vecto
 2025-07-16T12:52:10.195312+0530 INFO Metadata stored successfully
 2025-07-16T12:54:41.994298+0530 INFO Closed MongoDB connection.
 2025-07-16T12:54:41.995344+0530 INFO Connection to object store terminated
+2025-08-05T13:22:58.985853+0530 INFO Retrieving documents...
+2025-08-05T13:23:00.078829+0530 INFO Retrieved documents, sending context to agent...
+2025-08-05T13:36:52.286492+0530 INFO Retrieving documents...
+2025-08-05T13:36:53.671116+0530 INFO Retrieved documents, sending context to agent...
+2025-08-05T13:36:53.673334+0530 INFO Retrieving documents...
+2025-08-05T13:38:45.138846+0530 INFO Starting MCP Server
+2025-08-05T13:39:36.473418+0530 INFO Starting MCP Server
+2025-08-05T13:39:56.935512+0530 INFO Retrieving documents...
+2025-08-05T13:39:58.142624+0530 INFO Retrieved documents, sending context to agent...
+2025-08-05T13:40:33.315296+0530 INFO Retrieving documents...
+2025-08-05T13:40:34.318651+0530 INFO Retrieved documents, sending context to agent...
+2025-08-05T13:52:09.188638+0530 INFO Starting MCP Server
+2025-08-05T13:52:21.286025+0530 INFO Exiting the program...
+2025-08-05T13:52:56.032141+0530 INFO Starting MCP Server
+2025-08-05T13:54:06.554641+0530 INFO Exiting the program...
+2025-08-05T13:54:06.562157+0530 INFO Retrieving documents...
+2025-08-05T13:54:07.927875+0530 INFO Retrieved documents, sending context to agent...
+2025-08-05T13:57:03.041213+0530 INFO Starting MCP Server
+2025-08-05T13:58:04.765927+0530 INFO Exiting the program...
+2025-08-05T14:04:49.340909+0530 INFO Starting RAG MCP Test chat...
+2025-08-05T14:04:49.441837+0530 INFO Launching Gradio interface...
+2025-08-05T14:05:00.297449+0530 INFO Received message: Hey
+2025-08-05T14:05:01.456168+0530 INFO Starting MCP Server
+2025-08-05T14:05:01.550658+0530 INFO Invoking agent...
+2025-08-05T14:05:02.600375+0530 INFO Agent response: Hello! How can I assist you today?
+2025-08-05T14:05:07.175819+0530 INFO Received message: Dummy
+2025-08-05T14:05:08.336673+0530 INFO Starting MCP Server
+2025-08-05T14:05:08.394435+0530 INFO Invoking agent...
+2025-08-05T14:05:10.272808+0530 INFO Agent response: The dummy tool is working fine. What else can I do for you today?
+2025-08-05T14:05:42.192857+0530 INFO Received message: Tell me what kind of Asbestos were found in Building 110?
+2025-08-05T14:05:43.370473+0530 INFO Starting MCP Server
+2025-08-05T14:05:43.494687+0530 INFO Invoking agent...
+2025-08-05T14:05:44.588007+0530 INFO Retrieving documents...
+2025-08-05T14:05:46.039758+0530 INFO Retrieved documents, sending context to agent...
+2025-08-05T14:05:47.849399+0530 INFO Agent response: In Building 110, the type of asbestos found is Chrysotile, commonly known as white asbestos. It was identified in the upstand panels and cement cladding in the external areas, among other locations.
+2025-08-05T14:06:09.876070+0530 INFO Received message: Give me detailed report of all items in ASbestos register for Building 110
+2025-08-05T14:06:11.030518+0530 INFO Starting MCP Server
+2025-08-05T14:06:11.089721+0530 INFO Invoking agent...
+2025-08-05T14:06:12.339752+0530 INFO Retrieving documents...
+2025-08-05T14:06:13.589010+0530 INFO Retrieved documents, sending context to agent...
+2025-08-05T14:06:17.570774+0530 INFO Agent response: Here's the detailed asbestos register report for Building 110, Longcross Studios:
+
+1. **Location:** External External 003, Upstand panels, High level walls
+   - **Sample No:** JR007109
+   - **Product Type:** Asbestos Cement
+   - **Condition:** Medium Damage
+   - **Surface Treatment:** Surface Sealed
+   - **Asbestos Type:** Chrysotile
+   - **Quantity:** 60m²
+   - **Accessibility:** Occasionally likely to be disturbed
+   - **Material Score:** 5
+   - **Priority Score:** 4
+   - **Total PA risk assessment score:** 9
+   - **Recommendation:** No Attention Required, Label
+
+2. **Location:** External External 003, Cement cladding Walls
+   - **Sample No:** 04717-004 {JR007119}
+   - **Product Type:** Asbestos Cement
+   - **Condition:** Medium Damage
+   - **Surface Treatment:** Surface Sealed
+   - **Asbestos Type:** Chrysotile
+   - **Quantity:** Throughout
+   - **Accessibility:** Easily disturbed
+   - **Material Score:** 5
+   - **Priority Score:** 7
+   - **Total PA risk assessment score:** 12
+   - **Recommendation:** No Attention Required, Label
+
+3. **Location:** External External 003, Soffit boards To high level wall
+   - **Sample No:** As JR007109
+   - **Product Type:** Asbestos Cement
+   - **Condition:** Medium Damage
+
+These entries summarize the asbestos findings and recommendations for Building 110. Let me know if you need information on a specific item or further assistance!
+2025-08-05T14:06:41.957605+0530 INFO Received message: I am Zac
+2025-08-05T14:06:43.089671+0530 INFO Starting MCP Server
+2025-08-05T14:06:43.147602+0530 INFO Invoking agent...
+2025-08-05T14:06:44.186453+0530 INFO Agent response: Hello Zac! How can I assist you today?
+2025-08-05T14:06:47.921023+0530 INFO Received message: Who am I?
+2025-08-05T14:06:49.063632+0530 INFO Starting MCP Server
+2025-08-05T14:06:49.122743+0530 INFO Invoking agent...
+2025-08-05T14:06:52.568511+0530 INFO Agent response: Your name is Zac. How can I help you further?
+2025-08-05T14:06:59.029316+0530 INFO Received message: quit
+2025-08-05T14:07:00.194713+0530 INFO Starting MCP Server
+2025-08-05T14:07:00.253193+0530 INFO Invoking agent...
+2025-08-05T14:07:01.690578+0530 INFO Agent response: If you need anything else or want to continue later, feel free to reach out. Have a great day!
+2025-08-05T14:07:08.412911+0530 INFO Received message: quit
+2025-08-05T14:07:09.594530+0530 INFO Starting MCP Server
+2025-08-05T14:07:09.652944+0530 INFO Invoking agent...
+2025-08-05T14:07:11.132878+0530 INFO Agent response: If you have any more questions in the future, feel free to ask. Have a great day!
